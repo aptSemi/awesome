@@ -723,8 +723,11 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
---
---
--- GAPS --
 
+
+-- GAPS --
 beautiful.useless_gap = 3
+
+-- Autostart Applications --
+awful.spawn.with_shell("compton")
+awful.spawn.with_shell("nitrogen --restore")
